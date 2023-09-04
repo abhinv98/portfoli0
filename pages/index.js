@@ -37,7 +37,7 @@ const Home = () => {
         w-full h-full absolute mix-blend-color-dodge translate-z-0">
 
         </div>
-        {/* Particles */}
+        {/* Particles motion */}
         <div>
           Particles
         </div>
