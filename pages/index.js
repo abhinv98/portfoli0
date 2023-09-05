@@ -42,6 +42,7 @@ const Home = () => {
           Particles
         </div>
         {/* Avater */}
+        {/*add avatar later*/}
         <div>
           <Avatar />
         </div>
