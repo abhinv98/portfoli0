@@ -1,4 +1,6 @@
 import Image from "next/image";
+import React, { useState, useEffect } from "react";
+
 import Lottie from "lottie-react";
 import animationData from '../assets/animation_color1.json';
 
@@ -9,11 +11,35 @@ import Avatar from "../components/Avatar";
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
-import { useMediaQuery } from 'react-responsive';
+
 
 
 
 const Home = () => {
+  const [showAnimation, setShowAnimation] = useState(true);
+
+  useEffect(() => {
+    // Function to handle window resize
+    const handleResize = () => {
+      // Check if the screen width is greater than a certain threshold (e.g., 768px for desktop/laptop)
+      if (window.innerWidth > 768) {
+        setShowAnimation(true);
+      } else {
+        setShowAnimation(false);
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check when the component mounts
+    handleResize();
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   
   return ( 
     <div className="bg-primary/60 h-full ">
@@ -25,14 +51,14 @@ const Home = () => {
           </motion.h1>
           <motion.p variants={fadeIn('down', 0.3)} initial="hidden" animate="show"
           exit="hidden" className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Computer Science Graduate passionate for Web and Machine Learning application.
+            I specialise in UI/UX designs, web applications and python programming
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>
-          <motion.div variants={fadeIn('down', 0.4)} initial="hidden" animate="show"
+          <motion.div  variants={fadeIn('down', 0.4)} initial="hidden" animate="show"
           exit="hidden" className="hidden xl:flex">
-            <ProjectsBtn />
+            <ProjectsBtn  />
           </motion.div>
         </div>
       </div>
@@ -42,9 +68,7 @@ const Home = () => {
 
         </div>
         {/* Particles motion */}
-        <div>
-          Particles
-        </div>
+        <ParticlesContainer />
         {/* Avater */}
         {/*add avatar later*/}
         <div>
@@ -52,8 +76,8 @@ const Home = () => {
         </div>
         {/*animation*/}
         <motion.div variants={fadeIn('down', 0.2)} initial="hidden" animate="show"
-          exit="hidden" style={{position: 'absolute', right: '-400px', top: '30px'}}>
-          <Lottie animationData={animationData} style={{width: '50%', height: '50%'}}/>
+          exit="hidden" style={{position: 'absolute', right: '-400px', top: '30px', display: showAnimation ? "block" : "none"}}>
+          <Lottie animationData={animationData} style={{width: '50%', height: '50%'}} />
         </motion.div>
         
       </div>
