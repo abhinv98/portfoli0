@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Lottie from "lottie-react";
+import animationData from '../assets/animation_color1.json';
 
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
@@ -7,6 +9,7 @@ import Avatar from "../components/Avatar";
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
+import { useMediaQuery } from 'react-responsive';
 
 
 
@@ -33,7 +36,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat
+        <div className="bg-none  xl:bg-cover xl:bg-right xl:bg-no-repeat
         w-full h-full absolute mix-blend-color-dodge translate-z-0">
 
         </div>
@@ -46,6 +49,12 @@ const Home = () => {
         <div>
           <Avatar />
         </div>
+        {/*animation*/}
+        <motion.div variants={fadeIn('down', 0.2)} initial="hidden" animate="show"
+          exit="hidden" style={{position: 'absolute', right: '-400px', top: '30px'}}>
+          <Lottie animationData={animationData} style={{width: '50%', height: '50%'}}/>
+        </motion.div>
+        
       </div>
     </div>
   );
