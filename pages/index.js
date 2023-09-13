@@ -14,6 +14,7 @@ import { useMediaQuery } from 'react-responsive';
 
 
 const Home = () => {
+  
   return ( 
     <div className="bg-primary/60 h-full ">
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
@@ -47,7 +48,7 @@ const Home = () => {
         {/* Avater */}
         {/*add avatar later*/}
         <div>
-          <Avatar />
+          
         </div>
         {/*animation*/}
         <motion.div variants={fadeIn('down', 0.2)} initial="hidden" animate="show"
