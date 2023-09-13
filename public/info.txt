@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Sansation_Bold
+font link: https://www.fontsquirrel.com/fonts/sansation
+font author: Bernd Montag
+font author site: mailto:berndmontag@gmx.de
+
+
+icon designer: Adrien Coquet
+icon designer link: /coquet_adrien
+        
+
+fontColor: {"gradient-0":"#D5EA0E","gradient-1":"#EA0D7A"}
+bgColor: {"hex":"transparent"}
+iconColor: {"gradient-0":"#D5EA0E","gradient-1":"#EA0D7A"}
+
+      
