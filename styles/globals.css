@@ -29,7 +29,7 @@
     @apply text-[28px] leading-tight md:text-[38px] md:leading-[1.3] mb-8 font-semibold;
   }
   .h2 {
-    @apply text-[28px] leading-tight md:text-[47px] md:leading-[1.3] mb-4 font-semibold;
+    @apply text-[28px] leading-tight md:text-[38px] md:leading-[1.3] mb-4 font-semibold;
   }
   p {
     @apply md:text-[15px] leading-[1.8] text-white/60 font-light;

@@ -1,5 +1,6 @@
-const Work = () => {
-  return <div>Work</div>;
-};
+import ServiceSlider from '../../components/ServiceSlider';
+import Bulb from '../../components/Bulb';
+import Circles from '../../components/Circles';
 
-export default Work;
+import { motion } from 'framer-motion';
+import {fadeIn} from '../../variants';
